@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_splash_color"
+    tools:context=".features.takephoto.ResultTakePhoto">
+
+    <TextView
+        android:id="@+id/textViewNotFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:text="No results found"/>
+
+
+    <ProgressBar
+        android:id="@+id/ProgressBarSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:padding="20dp"
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result Take Photo"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:shadowDx="@integer/material_motion_duration_long_2"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/tvTitle"
+        android:id="@+id/ResultRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

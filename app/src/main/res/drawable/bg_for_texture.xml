@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Lapisan pertama: TextureView -->
+    <item android:id="@+id/bgtexture">
+        <TextureView
+            android:id="@+id/textureView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </item>
+
+    <!-- Lapisan kedua: Garis pinggir (stroke) -->
+    <item android:right="2dp" android:left="2dp" android:top="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <stroke android:color="@color/white" android:width="2dp" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_color"
+    tools:context=".features.imagedetection.ImageDetection">
+
+    <TextView
+        android:padding="20dp"
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Image Detection"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:padding="20dp"
+        android:layout_below="@id/tvTitle"
+        android:layout_above="@+id/btnSelectImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imaegView"/>
+
+    <Button
+        android:layout_above="@+id/btnSaveImage"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/btnSelectImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:text="Select Image"
+        android:background="@drawable/bg_btn"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:textSize="12sp"/>
+
+    <Button
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:id="@+id/btnSaveImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="60dp"
+        android:layout_marginLeft="60dp"
+        android:text="Save Image"
+        android:background="@drawable/bg_btn"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>

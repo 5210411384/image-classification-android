@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.akmalfaizy.objectdetection'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.akmalfaizy.objectdetection"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures{
+        viewBinding true
+        mlModelBinding true
+    }
+    namespace 'com.akmalfaizy.objectdetection'
+}
+
+dependencies {
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-messaging:23.2.1'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.2.1'
+
+    //TensorFlow
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.3.0'
+
+    //Binding
+    implementation 'androidx.databinding:databinding-compiler-common:8.1.0'
+
+    //ML vision Take Photo
+    implementation 'com.google.android.gms:play-services-auth:20.6.0'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.1.1'
+    implementation 'com.google.android.gms:play-services-vision:20.0.0'
+
+    implementation 'com.google.firebase:firebase-ml-vision:24.0.3'
+    implementation 'com.google.firebase:firebase-ml-vision-barcode-model:16.1.1'
+    implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Circle image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.google.firebase:firebase-ml-vision-image-label-model:20.0.0'
+
+    // for adding recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'
+
+    // for adding cardview
+    implementation 'androidx.cardview:cardview:1.0.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

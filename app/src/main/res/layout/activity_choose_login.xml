@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_color"
+    tools:context=".ChooseLogin">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/LogoDetect"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/LLBtn"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/LLBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/LoginWithGmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:text="Login with Gmail"
+            android:drawableLeft="@mipmap/logo_google"
+            android:background="@drawable/bg_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:id="@+id/LoginWithEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:text="Login with Email"
+            android:drawableLeft="@mipmap/logo_email"
+            android:background="@drawable/bg_btn"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+</RelativeLayout>
